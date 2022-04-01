@@ -1,34 +1,40 @@
 #!/usr/bin/env cwl-runner
+$namespaces:
+  cwltool: "http://commonwl.org/cwltool#"
 
 cwlVersion: v1.0
 class: Workflow
 
 inputs:
-  question: string
-  file_to_search: File
-  type_of_graph: int
+  - id: question
+    type: string
+  - id: file_to_search
+    type: File
+  - id: type_of_graph
+    type: int
 
 outputs:
-  graph:
+  - id: graph
     type: File
-    outputSource: result/classfile
 
 steps:
-  nlp:
+  - id: nlp
     run: bi-nlp.cwl
     in:
       question
     out:
-	  brand
-	  item
-	  time
+      - brand
+      - item
+      - time
 
-  search:
+  - id: search:
     run: bi-search.cwl
     in:
-      slot: nlp/slot
-	  file_to_search
-	  type_of_graph
-    out: graph
+      slot: 
+        nlp/slot
+	file_to_search
+	type_of_graph
+    out: 
+      - graph
 
 
