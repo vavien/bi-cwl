@@ -1,27 +1,22 @@
-#!/usr/bin/env cwl-runner
-
 cwlVersion: v1.0
 class: CommandLineTool
-
-label: 意图识别+槽标记
 
 baseCommand: python
 arguments: ["a.py"]
 
 inputs:
-  question:
+  - id: question
     type: string
     inputBinding:
       position: 1
 	  
 outputs:
-  intent:
+  - id: intent
     type: string
-  time:
+  - id: time:
     type: string
-  brand:
+  - id: brand
     type: string
-  query_item:
+  - id: query_item
     type: string
 	
-
