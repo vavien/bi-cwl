@@ -26,7 +26,7 @@ steps:
       - item
       - time
 
-  - id: search:
+  - id: search
     run: bi-search.cwl
     in:
       slot: 
