@@ -1,22 +1,18 @@
-#!/usr/bin/env cwl-runner
-
 cwlVersion: v1.0
 class: CommandLineTool
-
-label: 搜索结果
 
 baseCommand: python
 arguments: ["b.py"]
 
 inputs:
-  slot:
+  - id: slot:
     type: array
-  file_to_search:
+  - id: file_to_search:
     type: File
-  type_of_graph:
+  - id: type_of_graph:
     type: int
 	  
 outputs:
-  graph:
+  - id: graph:
     type: File
 
