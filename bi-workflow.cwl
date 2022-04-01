@@ -1,4 +1,3 @@
-#!/usr/bin/env cwl-runner
 $namespaces:
   cwltool: "http://commonwl.org/cwltool#"
 
