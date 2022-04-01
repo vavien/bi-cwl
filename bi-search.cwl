@@ -5,14 +5,14 @@ baseCommand: python
 arguments: ["b.py"]
 
 inputs:
-  - id: slot:
+  - id: slot
     type: array
-  - id: file_to_search:
+  - id: file_to_search
     type: File
-  - id: type_of_graph:
+  - id: type_of_graph
     type: int
 	  
 outputs:
-  - id: graph:
+  - id: graph
     type: File
 
